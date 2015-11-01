@@ -8,12 +8,6 @@ ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 
-# Configure user nobody to match unRAID's settings
- RUN usermod -u 99 nobody && \
-     usermod -g 100 nobody && \
-     usermod -d /config nobody && \
-     chown -R nobody:users /home
-
 RUN apt-get update &&  apt-get -y install xvfb \
                        x11vnc \
                        xdotool \
