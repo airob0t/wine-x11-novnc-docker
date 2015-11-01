@@ -24,7 +24,7 @@ RUN apt-get update &&  apt-get -y install xvfb \
                        rm -rf /var/lib/apt/lists/*
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-ENV DISPLAY :0
+ENV DISPLAY :0.0
 
 WORKDIR /root/
 ADD novnc /root/novnc/
