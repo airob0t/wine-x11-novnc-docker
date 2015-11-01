@@ -18,7 +18,8 @@ RUN apt-get update &&  apt-get -y install xvfb \
                        x11vnc \
                        xdotool \
                        wget \
-                       supervisor\
+                       supervisor \
+                       x11-apps \
                        net-tools && \
                        rm -rf /var/lib/apt/lists/*
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
