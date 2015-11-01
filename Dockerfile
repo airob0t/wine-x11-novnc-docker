@@ -19,7 +19,7 @@ RUN apt-get update &&  apt-get -y install xvfb \
                        xdotool \
                        wget \
                        supervisor\
-                       netstat && \
+                       net-tools && \
                        rm -rf /var/lib/apt/lists/*
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
